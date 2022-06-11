@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Single applet + API</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.geogebra.org/apps/deployggb.js"
+    ></script>
+    <link rel="stylesheet" href="https://www.geogebra.org/m/ezvfnpbv">
+  </head>
+
+  <body>
+     <script src="GeoGebra-init.js"></script>
+    <script src="sketch.js"></script>
+
+<style id="webmakerstyle">
+
+</style>
+</head>
+<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.css"
+      integrity="sha384-KiWOvVjnN8qwAZbuQyWDIbfCLFhLXNETzBQjA/92pIowpC0d2O3nppDGQVgwd2nB"
+      crossorigin="anonymous"
+    />
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/katex.min.js"
+      integrity="sha384-0fdwu/T/EQMsQlrHCCHoH10pkPLlKA1jL5dFyUOvB3lfeT2540/2g6YgSi2BL14p"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.15.3/dist/contrib/auto-render.min.js"
+      integrity="sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR"
+      crossorigin="anonymous"
+      onload="renderMathInElement(document.body);"
+    ></script>
+
+    <script
+      defer="defer"
+      src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+      integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+      crossorigin="anonymous"
+      onload='renderMathInElement(document.body,
+        {delimiters:[ {left: "$$", right: "$$" , display: true}, 
+                      {left: "$" , right: "$" , display: false}, 
+                      {left: "\\(" , right: "\\)" , display: false}, 
+                      {left: "\\[" , right: "\\]" , display: true} 
+                      ]
+        });'
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" />
+   
+  </head>
+  <body lang="pt">
+    <div class=WordSection1>
+
+<div style='border-top:solid #4472C4 1.0pt;border-left:none;border-bottom:solid #4472C4 1.0pt;
+border-right:none;padding:10.0pt 0cm 10.0pt 0cm;margin-left:43.2pt;margin-right:
+43.2pt'>
+
+<p class=MsoIntenseQuote style='margin-top:18.0pt;margin-right:3cm;margin-bottom:
+18.0pt;margin-left:2.3cm'>Exame Final Nacional de Matemática A</p>
+
+</div>
+
+<p class=MsoNormal><i><span style='color:#4472C4'>&nbsp;</span></i></p>
+
+<p class=MsoListParagraph style='margin-top:0cm;margin-right:0cm;margin-bottom:
+0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>1.<span
+style='font:7.0pt "Times New Roman"'> </span></b><span
+dir=LTR></span>Considere, num referencial o.n. $Oxyz$, um paralelepípedo
+retângulo $[ABCDEFGH]$ de bases $[ABCD]$ e $[FGHE]$,
+sendo $[AF]$ , $[BG]$, $[CH]$ e $[DE]$ as arestas laterais deste
+paralelepípedo.</p>
+<iframe scrolling="no" title="Exame 1" src="https://www.geogebra.org/material/iframe/id/bzkzbz6v/width/504/height/636/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="400px" height="400px" style="border:150px;margin-left:150.0pt"> </iframe>
+<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Na base $[ABCD]$,
+o vértice $A$ pertence ao semieixo positivo $Ox$, o vértice $B$ pertence ao
+semieixo positivo $Oy$, os vértices $C$ e $D$ têm cota positiva, e o segmento de
+reta $[BD]$ é uma diagonal. </p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Sabe-se ainda
+que: </p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:53.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>$E(7, 2,15)$ e $G(6, 10, 13)$ </p>
+
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:53.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>
+</span></span><span dir=LTR></span>  a reta $EF$ é definida pela equação $(x, y,z) = (1,-2,19)+k(-3,-2,2), k\in\mathbb R$ </p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Qual das equações
+seguintes define uma reta perpendicular à reta $EF$ e que passa no ponto $E$?</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x, y,z) = (7,-3,3)+k(2,-3,0), k\in\mathbb R$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x, y,z) = (7,2,15)+k(0,3,-3), k\in\mathbb R$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x, y,z) = (7,-10,3)+k(0,3,3), k\in\mathbb R$</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x, y,z) = (7,2,15)+k(2,0,-3), k\in\mathbb R$</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Numa escola frequentada por estudantes portugueses e
+estrangeiros, 60% dos alunos são raparigas e $15\%$ são rapazes estrangeiros.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Escolheu-se, ao acaso,
+um aluno dessa escola e verificou-se que era um rapaz.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual é a probabilidade
+de ele ser português?</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$45\%$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$50\%$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$57,5\%$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$62,5\%$</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:1cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Seja $(v_n)$ uma progressão geométrica.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Sabe-se que $v_5 = 4$ e
+que $v_8 = 108$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'> Qual é o valor de $v_6$?</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$12$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$24$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$48$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$60 $</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Em $\mathbb C$, conjunto dos números complexos, considere
+$z_1=2e^{i\frac{\pi}{4}}$ e $z_2=2e^{i\frac{3\pi}{28}}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Seja $w$ o número complexo
+tal que $w=\frac{z_1}{z_2}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Sabe-se que, no plano
+complexo, o afixo do número complexo $w$ é um dos vértices de um polígono
+regular com centro na origem do referencial e com outro vértice sobre o
+semieixo real positivo. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual é o número mínimo
+de vértices desse polígono?</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$7$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$14$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$21$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$28$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:1cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Considere, num referencial o.n. $Oxyz$, um trapézio $[PQRS]$ ,
+de bases $[PQ]$ e $[RS]$ , em que o lado $[PS]$ é perpendicular às bases. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Tem-se $P(1,-1,2)$, $Q(-2,1,1)$
+e $R(-5,5,-3)$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual das condições seguintes
+define a superfície esférica de centro no ponto $R$ e que passa no ponto $Q$?</p>
+<iframe scrolling="no" title="Exame 1" src="https://www.geogebra.org/material/iframe/id/uar323ek/width/623/height/492/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="580px" height="492px" style="border:0px;margin-left:50pt"> </iframe>
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x-5)^2+(y+5)^2+(z-3)^2=59$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x-5)^2+(y+5)^2+(z-3)^2=41$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x+5)^2+(y-5)^2+(z+3)^2=41$</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$(x+5)^2+(y-5)^2+(z+3)^2=59$</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:18.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>6.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Numa dada localidade, existe um clube onde se pratica badmínton
+e ténis.</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Com doze raquetes
+distintas, sendo seis de badmínton e seis de ténis, formam-se, ao acaso, dois conjuntos
+de seis raquetes cada um. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual é o valor,
+arredondado às centésimas, da probabilidade de cada um dos dois conjuntos ficar
+com três raquetes de badmínton e três raquetes de ténis?</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.22$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.43$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.50$</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.87$</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:18.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>7.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Considere, Seja $g$ uma função de domínio $\mathbb R\backslash\{2\}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Sabe-se que:</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>$\displaystyle\lim_{x\to2^-}g(x)=1$</p>
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>$\displaystyle\lim_{x\to2^+}{g(x)}=+\infty$</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:18.0pt;line-height:150%'>Seja $(v_n)$ a sucessão de termo geral
+$v_n=2-\frac{5}{n+3}$</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:18.0pt;line-height:150%'>A que é igual $\lim g(v_n)$?</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$1$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$2$</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$+\infty$</p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:18.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>8.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Em $\mathbb C$, conjunto dos números complexos, considere $z=2e^{i\frac{3\pi}{5}}$
+</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Seja $w$ o número complexo
+tal que $z\times w=i$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual dos valores
+seguintes é um argumento do número complexo $w$?</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$\frac{19\pi}{10}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$\frac{2\pi}{5}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$-\frac{2\pi}{5}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$-\frac{19\pi}{10}$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>9.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></b><span
+dir=LTR></span>Na Figura $1$, está representada, num referencial o.n. $Oxyz$, a
+pirâmide regular de base quadrada $[ABCD]$ e vértice $E$ </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Sabe-se que:</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:71.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>&#8199; a base da pirâmide está contida no
+plano $xOz$ </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:71.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>o vértice $A$ pertence ao semieixo positivo $Oz$
+e o vértice $B$ pertence ao semieixo negativo $Ox$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:71.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>o vértice $E$ tem coordenadas $(-2,6,2)$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:71.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>o vetor $\overrightarrow{BE}$ tem
+coordenadas $(-1,6,2)$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:71.4pt;text-indent:-18.0pt;line-height:150%'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span dir=LTR></span>o volume da pirâmide é 20</p>
+<iframe scrolling="no" title="Exame 1" src="https://www.geogebra.org/material/iframe/id/mgtxhebk/width/538/height/574/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="500px" height="500px" style="border:0px;margin-left:100.0pt"> </iframe>
+<p class=MsoListParagraphCxSpLast style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:35.4pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Seja $\alpha$ o
+plano perpendicular à reta $BE$ e que passa no ponto de coordenadas $(1,0,1)$
+</p>
+
+<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Qual das equações
+seguintes é uma equação do plano $\alpha$ ?</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$-x+6y+2z=0$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$x+6y+2z-3=0$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$x-6y-2z+1=0$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$2x-y+4z-5=0$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;text-indent:-18.0pt;line-height:150%'><b>10.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp; </span></b><span dir=LTR></span>Na
+Figura $3$, está representada, a sombreado, num referencial o.n. $xOy$, a
+região do plano cartesiano definida pela condição $0\leqslant x\leqslant10
+\wedge 0\leqslant y \leqslant 10$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Considere todos os
+pontos que pertencem a essa região e cujas coordenadas são números inteiros. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Escolhe-se, ao acaso, um
+desses pontos. </p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:18.0pt;line-height:150%'>Qual é o valor,
+arredondado às milésimas, da probabilidade de esse ponto pertencer à reta de
+equação $y= x + 7$ ?</p>
+      
+      <div 
+      style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:150.0pt;line-height:150%'
+      id="ggb-element"
+      style="resize:both"
+    ></div>
+
+
+<p class=MsoListParagraphCxSpMiddle style='margin-top:0cm;margin-right:0cm;
+margin-bottom:0cm;margin-left:72.0pt;line-height:150%'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(A)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.025$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(B)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.033$</p>
+
+<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(C)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.041$</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:18.0pt;
+line-height:150%'><b>(D)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></b><span dir=LTR></span>$0.057$</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:90.0pt'>&nbsp;</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:72.0pt'>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoListParagraph style='margin-left:72.0pt'>&nbsp;</p>
+
+</div>
+  </body>
+</html>
+
+
+<script src="filesystem:https://webmaker.app/temporary/script.js">
+</script>
+
+  </body>
+</html>
